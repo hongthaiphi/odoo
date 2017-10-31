@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+        <template id="assets_backend" name="static_resources_demo assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+		         <!-- All links to CSS and JS files should be added in here. -->
+                <link rel="stylesheet" href="/library_book/static/src/css/cssfile.css"/>
+            </xpath>
+        </template>
+    </data>
+</odoo>

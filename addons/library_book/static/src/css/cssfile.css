@@ -1,0 +1,35 @@
+.ex1 {
+    width: 100%;
+    margin: auto;
+}
+
+div.ex2 {
+    width: 65%;
+    align: right;
+}
+
+
+div.ex3 {
+    position: absolute;
+    right: 5px;
+    width: 34%;
+    border: 1px solid #c8c8d3;
+    background-color: white;
+}
+
+
+.center-horizontal-align {
+    display: table
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.o_form_view {
+    // Chatter
+    .oe_chatter {
+        display: inline-block;
+        max-width: 60%;
+        margin: 0 auto;
+        padding: 16px 16px 48px;
+    }
+}
