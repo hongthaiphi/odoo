@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+        <template id="assets_backend" name="project assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/project/static/src/less/project_dashboard.less"/>
+            </xpath>
+        </template>
 
         <!-- Top menu item -->
         <menuitem name="Project"
@@ -438,6 +443,7 @@
                             <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}"/>
                         </group>
                     </group>
+
                     <notebook>
                         <page name="description_page" string="Description">
                             <field name="description" type="html"/>
@@ -472,12 +478,19 @@
                         </page>
                     </notebook>
                     </sheet>
+
                     <div class="oe_chatter">
+                        <group>
                         <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        </group>
                         <field name="activity_ids" widget="mail_activity"/>
                         <field name="message_ids" widget="mail_thread"/>
                     </div>
+
                 </form>
+
+
+
             </field>
         </record>
 

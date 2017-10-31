@@ -45,3 +45,118 @@
         }
     }
 }
+
+
+
+.o_form_view {
+
+
+    .ex2 {
+        width: 65%;
+        align: right;
+        display: inline-block;
+        padding: 16px 16px 48px;
+        }
+
+
+    .oe_chatter {
+        -webkit-flex: none;
+                flex: none;
+        width: 34%;
+        min-width: none;
+        }
+
+
+}
+
+
+
+
+// Overriden style when form view in modal
+
+.o_form_view {
+    display: -webkit-flex;
+    display: flex;
+
+    .o_form_sheet_bg {
+        padding: 0;
+
+
+        > * {
+            margin: 0;
+        }
+
+        > .o_form_sheet {
+            box-shadow: none;
+            margin: 0 auto;
+            max-width: none;
+            min-width: none;
+            align: right;
+            -webkit-flex: initial;
+                    flex: initial;
+            width: 500px;
+            width: 55%;
+        }
+    }
+}
+
+
+
+// Default chatter layout.
+// Extended in enterprise by form_view.less to achieve the side-chatter
+.o_chatter {
+    width: 100%;
+    padding-top: 0!important;
+
+    .o_spinner {
+        text-align: center;
+        font-size: large;
+    }
+
+    .o_chatter_topbar {
+        height: @odoo-statusbar-height;
+        position: relative;
+        margin: @grid-gutter-width*0.5 -@grid-gutter-width*0.5 0;
+        padding: 0 @grid-gutter-width*0.5;
+        .o-flex-display();
+
+        > .btn {
+            height: @odoo-statusbar-height + 1;
+            border: 1px solid transparent;
+        }
+
+        > .o_followers {
+            height: @odoo-statusbar-height + 1;
+            border-bottom: 1px solid transparent;
+            .o-flex(1,1,auto);
+            display: table;
+            position:absolute; left:80px; top:25px;
+
+        }
+    }
+
+    &.o_chatter_composer_active .o_chatter_topbar {
+        > .btn, > .o_followers{
+            border-radius: @border-radius-small @border-radius-small 0 0;
+            border-width: 0 0 1px;
+            border-bottom-color: @gray-lighter-dark;
+
+            &.o_active {
+                color: @odoo-brand-primary;
+                background-color: @gray-lighter;
+                border-color: @gray-lighter-dark;
+                border-width: 1px 1px 0;
+            }
+        }
+    }
+}
+
+.o_chatter_button_schedule_activity{
+}
+
+.ex4 {
+    align: left;
+    display: inline-block;
+    padding-top:10%;
+    padding-left:-50%;
+}
