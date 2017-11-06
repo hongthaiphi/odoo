@@ -6,6 +6,26 @@
             </xpath>
         </template>
 
+        <!-- thaiph -->
+
+        <record id="project_task_action_ganttchart" model="ir.actions.act_window">
+
+        </record>
+
+        <menuitem name="Forecast"
+            id="menu_project_forecast"
+            parent="menu_main_pm"
+            sequence="3" groups="base.group_no_one,group_project_user"/>
+
+        <menuitem id="project_task_menu_forecast"
+            name="Gantt chart"
+            parent="menu_project_forecast"
+            action="project_task_action_ganttchart"
+            sequence="26"/>
+
+
+
+
         <!-- Top menu item -->
         <menuitem name="Project"
             id="menu_main_pm"
